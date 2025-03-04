@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/font_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/font_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/dialog_dismiss"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/shape_theme_ripple_cycle_20dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_font_cancel" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:fontFamily="@font/manrope_semi_bold"
+                android:gravity="center"
+                android:text="font_title"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/dialog_save"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/shape_theme_ripple_cycle_20dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_font_confirm" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/font_div"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/font_top_layout" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/font_top_layout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/font_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/font_style_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/shape_theme_04alpha_8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/font_size_layout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/alignment_start"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/transparent"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/alignment_center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/alignment_start_img"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/shape_theme_accent_10alpha_6dp"
+                            android:padding="2dp"
+                            android:src="@drawable/ic_bold" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/alignment_center"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/transparent"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/alignment_end"
+                        app:layout_constraintStart_toEndOf="@+id/alignment_start"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/alignment_center_img"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/shape_theme_accent_10alpha_6dp"
+                            android:padding="2dp"
+                            android:src="@drawable/ic_italic" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/alignment_end"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/transparent"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/strikethrough"
+                        app:layout_constraintStart_toEndOf="@+id/alignment_center"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/alignment_end_img"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/shape_theme_accent_10alpha_6dp"
+                            android:padding="2dp"
+                            android:src="@drawable/ic_underline" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/strikethrough"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardBackgroundColor="@color/transparent"
+                        app:cardCornerRadius="6dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/alignment_end"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/strikethrough_img"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/shape_theme_accent_10alpha_6dp"
+                            android:padding="2dp"
+                            android:src="@drawable/ic_strikethrough" />
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/font_size_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/shape_theme_04alpha_8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/font_style_layout"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/font_size"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/ic_font_size"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/font_smaller"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/size_of_font"
+                        android:layout_width="32dp"
+                        android:layout_height="36dp"
+                        android:fontFamily="@font/manrope_semi_bold"
+                        android:gravity="center"
+                        android:text="16"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/font_bigger"
+                        app:layout_constraintStart_toEndOf="@+id/font_smaller"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/shape_theme_04alpha_32dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/font_smaller"
+                        app:layout_constraintEnd_toEndOf="@+id/font_bigger"
+                        app:layout_constraintStart_toStartOf="@+id/font_smaller"
+                        app:layout_constraintTop_toTopOf="@+id/font_smaller" />
+
+                    <ImageView
+                        android:id="@+id/font_smaller"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/shape_theme_04alpha_32dp_ripple"
+                        android:padding="6dp"
+                        android:src="@drawable/ic_font_small"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/size_of_font"
+                        app:layout_constraintStart_toEndOf="@+id/font_size"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/font_bigger"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/shape_theme_04alpha_32dp_ripple"
+                        android:padding="6dp"
+                        android:src="@drawable/ic_font_big"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/size_of_font"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/font_highlight_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/shape_theme_04alpha_8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/font_style_layout">
+
+                    <View
+                        android:id="@+id/font_hightlight_div"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="72dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/shape_theme_04alpha_8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/font_hightlight_underline"
+                        android:layout_width="20dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        app:layout_constraintBottom_toBottomOf="@+id/font_hightlight"
+                        app:layout_constraintEnd_toEndOf="@+id/font_hightlight"
+                        app:layout_constraintStart_toStartOf="@+id/font_hightlight"
+                        app:layout_constraintTop_toTopOf="@+id/font_hightlight" />
+
+                    <ImageView
+                        android:id="@+id/font_hightlight"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_charactor_big"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/font_hightlight_div"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/font_hightlight_recycler"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/font_hightlight_div"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/font_color_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/shape_theme_04alpha_8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/font_highlight_layout">
+
+                    <View
+                        android:id="@+id/font_color_div"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="72dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/shape_theme_04alpha_8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/font_color"
+                        android:layout_width="16dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="2.5dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_charactor"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/font_color_div"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/font_color_underline"
+                        android:layout_width="18dp"
+                        android:layout_height="2.5dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/text_color_new"
+                        app:layout_constraintEnd_toEndOf="@+id/font_color"
+                        app:layout_constraintStart_toStartOf="@+id/font_color"
+                        app:layout_constraintTop_toBottomOf="@+id/font_color" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/font_color_recycler"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/font_color_div"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/font_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/font_color_layout" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

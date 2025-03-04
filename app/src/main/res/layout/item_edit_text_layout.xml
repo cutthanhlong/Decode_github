@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/hold_view"
+        android:layout_width="30dp"
+        android:layout_height="0dp" />
+
+    <com.example.myapplication.custom.edittext.EditText
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:background="@null"
+        android:fontFamily="@font/manrope_medium"
+        android:gravity="top"
+        android:hint="@string/content"
+        android:imeOptions="actionNext"
+        android:inputType="textNoSuggestions"
+        android:lineSpacingExtra="4dp"
+        android:linksClickable="false"
+        android:paddingBottom="2dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textColorHighlight="#FFED64"
+        android:textColorHint="@color/black"
+        android:textCursorDrawable="@drawable/shape_cursor_color"
+        android:textSize="16sp" />
+</LinearLayout>

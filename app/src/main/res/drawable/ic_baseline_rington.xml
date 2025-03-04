@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <group
+        android:translateX="-36"
+        android:translateY="-499">
+        <group
+            android:translateX="16"
+            android:translateY="487">
+            <group
+                android:translateX="20"
+                android:translateY="12">
+                <path
+                    android:pathData="M5.46769803,18.2043296 L5.46769803,17.4992871 L5.46769803,17.4992871 L5.46769803,12.1794746 C5.46769803,7.85380842 8.39383421,4.34716312 12.0034061,4.34716312 C15.612978,4.34716312 18.5391142,7.85380842 18.5391142,12.1794746 L18.5391142,17.4818301 L18.5391142,17.4818301 L18.5391142,18.2043296"
+                    android:strokeColor="#7f040694"
+                    android:strokeWidth="2"
+                    android:strokeLineCap="round"
+                    android:strokeAlpha="0.64"
+                    android:fillAlpha="0.64"/>
+                <path
+                    android:pathData="M 12 2.14667571 L 12 4.34716312"
+                    android:strokeColor="#7f040694"
+                    android:strokeWidth="2"
+                    android:strokeLineCap="round"
+                    android:strokeAlpha="0.64"
+                    android:fillAlpha="0.64"/>
+                <path
+                    android:pathData="M 20.8291987 19.3045733 L 3.17080135 19.3045733"
+                    android:strokeColor="#7f040694"
+                    android:strokeWidth="2"
+                    android:strokeLineCap="round"
+                    android:strokeAlpha="0.64"
+                    android:fillAlpha="0.64"/>
+                <path
+                    android:fillColor="#7f040694"
+                    android:pathData="M9.79951258,19.978293 C9.79951258,21.1935886 10.7847044,22.1787804 12,22.1787804 C13.2152956,22.1787804 14.2004874,21.1935886 14.2004874,19.978293 L9.79951258,19.978293 Z"
+                    android:strokeWidth="1"
+                    android:strokeAlpha="0.64"
+                    android:fillAlpha="0.64"/>
+            </group>
+        </group>
+    </group>
+</vector>
